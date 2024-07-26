@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <link rel="stylesheet" href="">
+    <title>Typescript Learning</title>
+</head>
+<body>
+
+<label for="passwordLength">Password Length:</label>
+<input type="number" id="passwordLength"><br>
+
+<input type="checkbox" id="includeLowerCase">
+<label for="includeLowerCase">includeLowerCase</label><br>
+
+<input type="checkbox" id="includeUpperCase">
+<label for="includeUpperCase">includeUpperCase</label><br>
+
+<input type="checkbox" id="includeNumber">
+<label for="includeNumber">includeNumber</label><br>
+
+<input type="checkbox" id="includeSymbol">
+<label for="includeSymbol">includeSymbol</label><br>
+
+<button onclick="genratePassword(includeLowerCase)">Generate</button>
+
+<h1 id="passwordResult"></h1>
+
+
+
+<script src="index.js"></script>
+</body>
+</html>
