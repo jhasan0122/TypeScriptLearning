@@ -1,4 +1,10 @@
 
+// function walkDog(callback) {
+//     setTimeout(()=>{
+//         console.log("You walk the dog 🐕");
+//         callback()
+//     },1500)
+// }
 function walkDog() {
     // @ts-ignore
     return new Promise((resolve, reject)=>{
@@ -16,6 +22,12 @@ function walkDog() {
     })
 }
 
+// function cleanKitchen(callback) {
+//     setTimeout(()=>{
+//         console.log("You clean the kitchen");
+//         callback();
+//     },2500);
+// }
 function cleanKitchen() {
 
     // @ts-ignore
@@ -35,6 +47,12 @@ function cleanKitchen() {
     });
 }
 
+//function takeOutTrash(callback) {
+//     setTimeout(()=>{
+//         console.log("You Take out the trash");
+//         callback();
+//     },500);
+// }
 function takeOutTrash() {
     // @ts-ignore
     return new Promise((resolve, reject) => {
@@ -51,28 +69,18 @@ function takeOutTrash() {
         },500);
     })
 }
+//
 
-// walkDog().then(value => { console.log(value) ; return cleanKitchen()})
-//     .then(value => {console.log(value) ; return takeOutTrash()})
-//     .then(value => {console.log(value) ; console.log("You finished all the chores")})
-//     .catch(error => {
-//         console.log(error);
-//     });
-
-// @ts-ignore
-async function doEveryThing() {
-    try{
-        const walkDoResult = await walkDog();
-        console.log(walkDoResult);
-
-        const cleanKitchenResult = await cleanKitchen();
-        console.log(cleanKitchenResult);
-
-        const takeOutTrashResult = await takeOutTrash();
-        console.log(takeOutTrashResult);
-    }catch (error){
-        console.error(error);
-    }
-}
-
-doEveryThing();
+// walkDog(()=>{
+//     cleanKitchen(()=>{
+//         takeOutTrash(()=>{
+//             console.log("All work finished");
+//         })
+//     })
+// })
+walkDog().then(value => { console.log(value) ; return cleanKitchen()})
+    .then(value => {console.log(value) ; return takeOutTrash()})
+    .then(value => {console.log(value) ; console.log("You finished all the chores")})
+    .catch(error => {
+        console.log(error);
+    });

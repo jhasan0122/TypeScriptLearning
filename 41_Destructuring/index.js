@@ -1,0 +1,14 @@
+var _a, _b;
+var a = 1;
+var b = 2;
+_a = [b, a], a = _a[0], b = _a[1];
+console.log(a);
+console.log(b);
+var colors = ["red", "green", "blue", "black", "white"];
+_b = [colors[4], colors[0]], colors[0] = _b[0], colors[4] = _b[1];
+console.log(colors);
+var firstColor = colors[0], secondColor = colors[1], thirdColor = colors[2], extra = colors.slice(3);
+console.log(firstColor);
+console.log(secondColor);
+console.log(thirdColor);
+console.log(extra);

@@ -1,0 +1,6 @@
+.greenText, #player_score{
+    color: green;
+}
+.redText, #computer_score{
+    color: red;
+}
